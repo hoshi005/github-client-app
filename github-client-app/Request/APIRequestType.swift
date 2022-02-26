@@ -23,7 +23,7 @@ protocol APIRequestType {
 extension APIRequestType {
     var scheme: String { "https" }
     var host: String { "api.github.com" }
-    var queryItem: [URLQueryItem]? { nil }
+    var queryItems: [URLQueryItem]? { nil }
 }
 
 
