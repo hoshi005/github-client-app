@@ -30,6 +30,7 @@
 		EFEFC23227CA09B400E8C23E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EFEFC23127CA09B400E8C23E /* SDWebImageSwiftUI */; };
 		EFEFC23627CA0BE200E8C23E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC23527CA0BE200E8C23E /* SearchBar.swift */; };
 		EFEFC23827CA0CB500E8C23E /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC23727CA0CB500E8C23E /* UserListView.swift */; };
+		EFEFC23A27CA0FA800E8C23E /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC23927CA0FA800E8C23E /* UserDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		EFEFC22E27CA049C00E8C23E /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		EFEFC23527CA0BE200E8C23E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		EFEFC23727CA0CB500E8C23E /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		EFEFC23927CA0FA800E8C23E /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				EFEFC20F27C9B8F300E8C23E /* UserDetail.swift */,
+				EFEFC23927CA0FA800E8C23E /* UserDetailViewModel.swift */,
 			);
 			path = UserDetail;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFEFC23A27CA0FA800E8C23E /* UserDetailViewModel.swift in Sources */,
 				EFEFC23827CA0CB500E8C23E /* UserListView.swift in Sources */,
 				EFEFC22027C9BCFD00E8C23E /* FetchRepositoryRequest.swift in Sources */,
 				EFEFC21427C9B92400E8C23E /* APIRequestType.swift in Sources */,
