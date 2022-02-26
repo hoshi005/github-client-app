@@ -14,35 +14,12 @@ struct UserList: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Image(systemName: "magnifyingglass")
-                    .font(.title2)
-                    .foregroundColor(.secondary)
-                TextField("githubユーザ名を入力してください", text: $viewModel.searchText)
-                    .disableAutocorrection(true)
-            }
-            .padding(.vertical, 12)
-            .padding(.horizontal)
-            .background(
-                Capsule()
-                    .strokeBorder(Color.accentColor, lineWidth: 1.0)
-            )
-            .padding(.horizontal)
             
-            List {
-                ForEach(viewModel.users) { user in
-                    HStack {
-                        WebImage(url: user.avatarUrl)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 60, height: 60)
-                            .clipShape(Circle())
-                        Text(user.login)
-                            .font(.title2)
-                            .fontWeight(.bold)
-                    }
-                }
-            }
+            // 検索バー.
+            SearchBar(text: $viewModel.searchText)
+            
+            // ユーザ一覧.
+            UserListView(viewModel: viewModel)
         }
     }
 }
