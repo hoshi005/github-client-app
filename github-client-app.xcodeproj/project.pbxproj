@@ -8,18 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		EFEFC1F727C9B5E900E8C23E /* github_client_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC1F627C9B5E900E8C23E /* github_client_appApp.swift */; };
-		EFEFC1F927C9B5E900E8C23E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC1F827C9B5E900E8C23E /* ContentView.swift */; };
 		EFEFC1FB27C9B5EA00E8C23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEFC1FA27C9B5EA00E8C23E /* Assets.xcassets */; };
 		EFEFC1FE27C9B5EA00E8C23E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEFC1FD27C9B5EA00E8C23E /* Preview Assets.xcassets */; };
+		EFEFC20E27C9B8EA00E8C23E /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC20D27C9B8EA00E8C23E /* UserList.swift */; };
+		EFEFC21027C9B8F300E8C23E /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC20F27C9B8F300E8C23E /* UserDetail.swift */; };
+		EFEFC21227C9B91200E8C23E /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC21127C9B91200E8C23E /* SafariView.swift */; };
+		EFEFC21427C9B92400E8C23E /* APIRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC21327C9B92400E8C23E /* APIRequestType.swift */; };
+		EFEFC21627C9B93400E8C23E /* APIRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC21527C9B93400E8C23E /* APIRepositoryType.swift */; };
+		EFEFC21827C9B94200E8C23E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC21727C9B94200E8C23E /* APIError.swift */; };
+		EFEFC21A27C9B95300E8C23E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC21927C9B95300E8C23E /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EFEFC1F327C9B5E900E8C23E /* github-client-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "github-client-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEFC1F627C9B5E900E8C23E /* github_client_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = github_client_appApp.swift; sourceTree = "<group>"; };
-		EFEFC1F827C9B5E900E8C23E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EFEFC1FA27C9B5EA00E8C23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFEFC1FD27C9B5EA00E8C23E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EFEFC20427C9B6E500E8C23E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EFEFC20D27C9B8EA00E8C23E /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
+		EFEFC20F27C9B8F300E8C23E /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
+		EFEFC21127C9B91200E8C23E /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		EFEFC21327C9B92400E8C23E /* APIRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestType.swift; sourceTree = "<group>"; };
+		EFEFC21527C9B93400E8C23E /* APIRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRepositoryType.swift; sourceTree = "<group>"; };
+		EFEFC21727C9B94200E8C23E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		EFEFC21927C9B95300E8C23E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				EFEFC1F627C9B5E900E8C23E /* github_client_appApp.swift */,
-				EFEFC1F827C9B5E900E8C23E /* ContentView.swift */,
+				EFEFC21927C9B95300E8C23E /* Constant.swift */,
 				EFEFC20527C9B78A00E8C23E /* Screen */,
 				EFEFC20927C9B7B800E8C23E /* Request */,
 				EFEFC20A27C9B7C500E8C23E /* Repository */,
@@ -86,6 +98,7 @@
 		EFEFC20627C9B79200E8C23E /* UserList */ = {
 			isa = PBXGroup;
 			children = (
+				EFEFC20D27C9B8EA00E8C23E /* UserList.swift */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
@@ -93,6 +106,7 @@
 		EFEFC20727C9B79800E8C23E /* UserDetail */ = {
 			isa = PBXGroup;
 			children = (
+				EFEFC20F27C9B8F300E8C23E /* UserDetail.swift */,
 			);
 			path = UserDetail;
 			sourceTree = "<group>";
@@ -100,6 +114,7 @@
 		EFEFC20827C9B7A400E8C23E /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				EFEFC21127C9B91200E8C23E /* SafariView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -107,6 +122,7 @@
 		EFEFC20927C9B7B800E8C23E /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				EFEFC21327C9B92400E8C23E /* APIRequestType.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -114,6 +130,7 @@
 		EFEFC20A27C9B7C500E8C23E /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				EFEFC21527C9B93400E8C23E /* APIRepositoryType.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -121,6 +138,7 @@
 		EFEFC20B27C9B7D400E8C23E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EFEFC21727C9B94200E8C23E /* APIError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,8 +213,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFEFC1F927C9B5E900E8C23E /* ContentView.swift in Sources */,
+				EFEFC21427C9B92400E8C23E /* APIRequestType.swift in Sources */,
+				EFEFC21A27C9B95300E8C23E /* Constant.swift in Sources */,
+				EFEFC21027C9B8F300E8C23E /* UserDetail.swift in Sources */,
+				EFEFC21627C9B93400E8C23E /* APIRepositoryType.swift in Sources */,
+				EFEFC20E27C9B8EA00E8C23E /* UserList.swift in Sources */,
+				EFEFC21827C9B94200E8C23E /* APIError.swift in Sources */,
 				EFEFC1F727C9B5E900E8C23E /* github_client_appApp.swift in Sources */,
+				EFEFC21227C9B91200E8C23E /* SafariView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
