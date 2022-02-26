@@ -13,13 +13,21 @@ struct UserList: View {
     @StateObject private var viewModel = UserListViewModel()
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0.0) {
             
             // 検索バー.
             SearchBar(text: $viewModel.searchText)
             
             // ユーザ一覧.
             UserListView(viewModel: viewModel)
+        }
+        .background(Color("BackgroundColor"))
+        .navigationBarHidden(true)
+        .alert(item: $viewModel.error) {
+            Alert(
+                title: Text("Error!!"),
+                message: Text($0.localizedDescription)
+            )
         }
     }
 }
