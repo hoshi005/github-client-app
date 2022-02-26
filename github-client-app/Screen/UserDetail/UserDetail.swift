@@ -14,6 +14,10 @@ struct UserDetail: View {
     
     var body: some View {
         Text(user.login)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color("BackgroundColor"))
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle(user.login)
     }
 }
 

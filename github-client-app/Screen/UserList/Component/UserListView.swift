@@ -15,7 +15,11 @@ struct UserListView: View {
     var body: some View {
         List {
             ForEach(viewModel.users) { user in
-                UserListViewItem(user: user)
+                NavigationLink {
+                    UserDetail(user: user)
+                } label: {
+                    UserListViewItem(user: user)
+                }
             }
         }
     }
