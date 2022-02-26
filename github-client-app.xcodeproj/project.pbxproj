@@ -26,6 +26,7 @@
 		EFEFC22A27CA03E300E8C23E /* search_user_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = EFEFC22727CA03E300E8C23E /* search_user_sample.json */; };
 		EFEFC22B27CA03E300E8C23E /* fetch_user_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = EFEFC22827CA03E300E8C23E /* fetch_user_sample.json */; };
 		EFEFC22D27CA042D00E8C23E /* Bundle+decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC22C27CA042D00E8C23E /* Bundle+decode.swift */; };
+		EFEFC22F27CA049C00E8C23E /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC22E27CA049C00E8C23E /* UserListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		EFEFC22727CA03E300E8C23E /* search_user_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search_user_sample.json; sourceTree = "<group>"; };
 		EFEFC22827CA03E300E8C23E /* fetch_user_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fetch_user_sample.json; sourceTree = "<group>"; };
 		EFEFC22C27CA042D00E8C23E /* Bundle+decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+decode.swift"; sourceTree = "<group>"; };
+		EFEFC22E27CA049C00E8C23E /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				EFEFC20D27C9B8EA00E8C23E /* UserList.swift */,
+				EFEFC22E27CA049C00E8C23E /* UserListViewModel.swift */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				EFEFC21427C9B92400E8C23E /* APIRequestType.swift in Sources */,
 				EFEFC21A27C9B95300E8C23E /* Constant.swift in Sources */,
 				EFEFC22227C9BD2A00E8C23E /* Model.swift in Sources */,
+				EFEFC22F27CA049C00E8C23E /* UserListViewModel.swift in Sources */,
 				EFEFC21027C9B8F300E8C23E /* UserDetail.swift in Sources */,
 				EFEFC21627C9B93400E8C23E /* APIRepositoryType.swift in Sources */,
 				EFEFC20E27C9B8EA00E8C23E /* UserList.swift in Sources */,
