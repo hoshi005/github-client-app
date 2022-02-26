@@ -19,6 +19,7 @@
 		EFEFC1F827C9B5E900E8C23E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EFEFC1FA27C9B5EA00E8C23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFEFC1FD27C9B5EA00E8C23E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EFEFC20427C9B6E500E8C23E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +36,7 @@
 		EFEFC1EA27C9B5E900E8C23E = {
 			isa = PBXGroup;
 			children = (
+				EFEFC20427C9B6E500E8C23E /* README.md */,
 				EFEFC1F527C9B5E900E8C23E /* github-client-app */,
 				EFEFC1F427C9B5E900E8C23E /* Products */,
 			);
@@ -53,6 +55,10 @@
 			children = (
 				EFEFC1F627C9B5E900E8C23E /* github_client_appApp.swift */,
 				EFEFC1F827C9B5E900E8C23E /* ContentView.swift */,
+				EFEFC20527C9B78A00E8C23E /* Screen */,
+				EFEFC20927C9B7B800E8C23E /* Request */,
+				EFEFC20A27C9B7C500E8C23E /* Repository */,
+				EFEFC20B27C9B7D400E8C23E /* Model */,
 				EFEFC1FA27C9B5EA00E8C23E /* Assets.xcassets */,
 				EFEFC1FC27C9B5EA00E8C23E /* Preview Content */,
 			);
@@ -65,6 +71,58 @@
 				EFEFC1FD27C9B5EA00E8C23E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EFEFC20527C9B78A00E8C23E /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				EFEFC20627C9B79200E8C23E /* UserList */,
+				EFEFC20727C9B79800E8C23E /* UserDetail */,
+				EFEFC20827C9B7A400E8C23E /* Component */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		EFEFC20627C9B79200E8C23E /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		EFEFC20727C9B79800E8C23E /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserDetail;
+			sourceTree = "<group>";
+		};
+		EFEFC20827C9B7A400E8C23E /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		EFEFC20927C9B7B800E8C23E /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		EFEFC20A27C9B7C500E8C23E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		EFEFC20B27C9B7D400E8C23E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
