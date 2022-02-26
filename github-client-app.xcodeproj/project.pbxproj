@@ -22,6 +22,10 @@
 		EFEFC22027C9BCFD00E8C23E /* FetchRepositoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC21F27C9BCFC00E8C23E /* FetchRepositoryRequest.swift */; };
 		EFEFC22227C9BD2A00E8C23E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC22127C9BD2A00E8C23E /* Model.swift */; };
 		EFEFC22427C9BEFC00E8C23E /* GithubAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC22327C9BEFC00E8C23E /* GithubAPIRepository.swift */; };
+		EFEFC22927CA03E300E8C23E /* fetch_repository_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = EFEFC22627CA03E300E8C23E /* fetch_repository_sample.json */; };
+		EFEFC22A27CA03E300E8C23E /* search_user_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = EFEFC22727CA03E300E8C23E /* search_user_sample.json */; };
+		EFEFC22B27CA03E300E8C23E /* fetch_user_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = EFEFC22827CA03E300E8C23E /* fetch_user_sample.json */; };
+		EFEFC22D27CA042D00E8C23E /* Bundle+decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC22C27CA042D00E8C23E /* Bundle+decode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		EFEFC21F27C9BCFC00E8C23E /* FetchRepositoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRepositoryRequest.swift; sourceTree = "<group>"; };
 		EFEFC22127C9BD2A00E8C23E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		EFEFC22327C9BEFC00E8C23E /* GithubAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIRepository.swift; sourceTree = "<group>"; };
+		EFEFC22627CA03E300E8C23E /* fetch_repository_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fetch_repository_sample.json; sourceTree = "<group>"; };
+		EFEFC22727CA03E300E8C23E /* search_user_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search_user_sample.json; sourceTree = "<group>"; };
+		EFEFC22827CA03E300E8C23E /* fetch_user_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fetch_user_sample.json; sourceTree = "<group>"; };
+		EFEFC22C27CA042D00E8C23E /* Bundle+decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+decode.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 				EFEFC20927C9B7B800E8C23E /* Request */,
 				EFEFC20A27C9B7C500E8C23E /* Repository */,
 				EFEFC20B27C9B7D400E8C23E /* Model */,
+				EFEFC22527CA03C400E8C23E /* Ohter Files */,
 				EFEFC1FA27C9B5EA00E8C23E /* Assets.xcassets */,
 				EFEFC1FC27C9B5EA00E8C23E /* Preview Content */,
 			);
@@ -158,6 +167,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EFEFC22527CA03C400E8C23E /* Ohter Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFEFC22C27CA042D00E8C23E /* Bundle+decode.swift */,
+				EFEFC22727CA03E300E8C23E /* search_user_sample.json */,
+				EFEFC22827CA03E300E8C23E /* fetch_user_sample.json */,
+				EFEFC22627CA03E300E8C23E /* fetch_repository_sample.json */,
+			);
+			path = "Ohter Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,6 +236,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFEFC22A27CA03E300E8C23E /* search_user_sample.json in Resources */,
+				EFEFC22B27CA03E300E8C23E /* fetch_user_sample.json in Resources */,
+				EFEFC22927CA03E300E8C23E /* fetch_repository_sample.json in Resources */,
 				EFEFC1FE27C9B5EA00E8C23E /* Preview Assets.xcassets in Resources */,
 				EFEFC1FB27C9B5EA00E8C23E /* Assets.xcassets in Resources */,
 			);
@@ -237,6 +260,7 @@
 				EFEFC20E27C9B8EA00E8C23E /* UserList.swift in Sources */,
 				EFEFC22427C9BEFC00E8C23E /* GithubAPIRepository.swift in Sources */,
 				EFEFC21E27C9BCF200E8C23E /* FetchUserRequest.swift in Sources */,
+				EFEFC22D27CA042D00E8C23E /* Bundle+decode.swift in Sources */,
 				EFEFC21827C9B94200E8C23E /* APIError.swift in Sources */,
 				EFEFC1F727C9B5E900E8C23E /* github_client_appApp.swift in Sources */,
 				EFEFC21227C9B91200E8C23E /* SafariView.swift in Sources */,
