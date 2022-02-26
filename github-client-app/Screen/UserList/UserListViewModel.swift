@@ -20,6 +20,15 @@ final class UserListViewModel: ObservableObject {
     
     init(repository: APIRepositoryType = GithubAPIRepository()) {
         self.repository = repository
+        
+        // インクリメンタルサーチ.
+        $searchText
+            .removeDuplicates()
+            .debounce(for: 0.5, scheduler: RunLoop.main)
+            .sink( receiveValue: { [weak self] _ in
+                self?.search()
+            })
+            .store(in: &disposables)
     }
     
     func search() {
@@ -49,6 +58,5 @@ final class UserListViewModel: ObservableObject {
                 self.users = response.items
             }
             .store(in: &disposables)
-
     }
 }
