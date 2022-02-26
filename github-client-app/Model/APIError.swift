@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+enum APIError: Error, Identifiable {
+    
+    case invalidURL(description: String)
+    case responseError(description: String)
+    case parseError(description: String)
+    
+    var id: String {
+        UUID().uuidString
+    }
+}

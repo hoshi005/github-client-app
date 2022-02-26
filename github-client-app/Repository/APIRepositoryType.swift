@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import Combine
+
+protocol APIRepositoryType {
+    func request<Request>(with request: Request) -> AnyPublisher<Request.Response, APIError> where Request: APIRequestType
+}
