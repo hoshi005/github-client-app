@@ -6,15 +6,44 @@
 //
 
 import SwiftUI
+import SafariServices
 
-struct SafariView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct SafariView: UIViewControllerRepresentable {
+    
+    typealias UIViewControllerType = SFSafariViewController
+    let url: URL
+    
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(self)
+    }
+    
+    func makeUIViewController(context: Context) -> SFSafariViewController {
+        let vc = SFSafariViewController(url: url)
+        vc.delegate = context.coordinator
+        vc.preferredControlTintColor = UIColor(Color.accentColor)
+        return vc
+    }
+    
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: Context) {
+        print(#function)
+    }
+    
+    
+    // MARK: - Coordinatorクラス.
+    
+    class Coordinator: NSObject, SFSafariViewControllerDelegate {
+        
+        var parent: SafariView
+        
+        init(_ parent: SafariView) {
+            self.parent = parent
+        }
+        
+        // MARK: - SFSafariViewDelegate.
+        
+        func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+            print(#function)
+        }
     }
 }
 
-struct SafariView_Previews: PreviewProvider {
-    static var previews: some View {
-        SafariView()
-    }
-}
