@@ -42,7 +42,7 @@ struct UserDetail: View {
             
             List {
                 ForEach(viewModel.repositories) { repository in
-                    Text(repository.name)
+                    RepositoryListItem(repository: repository)
                         .onTapGesture {
                             viewModel.selectedRepository = repository
                         }

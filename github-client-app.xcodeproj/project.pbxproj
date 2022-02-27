@@ -31,6 +31,7 @@
 		EFEFC23827CA0CB500E8C23E /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC23727CA0CB500E8C23E /* UserListView.swift */; };
 		EFEFC23A27CA0FA800E8C23E /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC23927CA0FA800E8C23E /* UserDetailViewModel.swift */; };
 		EFEFC23D27CB16B400E8C23E /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC23C27CB16B400E8C23E /* SafariView.swift */; };
+		EFEFC23F27CB1C8500E8C23E /* RepositoryListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC23E27CB1C8500E8C23E /* RepositoryListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		EFEFC23727CA0CB500E8C23E /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		EFEFC23927CA0FA800E8C23E /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		EFEFC23C27CB16B400E8C23E /* SafariView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		EFEFC23E27CB1C8500E8C23E /* RepositoryListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				EFEFC23C27CB16B400E8C23E /* SafariView.swift */,
+				EFEFC23E27CB1C8500E8C23E /* RepositoryListItem.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFEFC23A27CA0FA800E8C23E /* UserDetailViewModel.swift in Sources */,
+				EFEFC23F27CB1C8500E8C23E /* RepositoryListItem.swift in Sources */,
 				EFEFC23827CA0CB500E8C23E /* UserListView.swift in Sources */,
 				EFEFC22027C9BCFD00E8C23E /* FetchRepositoryRequest.swift in Sources */,
 				EFEFC21427C9B92400E8C23E /* APIRequestType.swift in Sources */,
