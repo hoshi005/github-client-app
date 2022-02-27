@@ -37,6 +37,9 @@
 		EFEFC24627CB2AF800E8C23E /* UserGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC24527CB2AF800E8C23E /* UserGridView.swift */; };
 		EFEFC24827CB306B00E8C23E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFEFC24727CB306B00E8C23E /* GoogleService-Info.plist */; };
 		EFEFC24B27CB30F600E8C23E /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = EFEFC24A27CB30F600E8C23E /* FirebaseRemoteConfig */; };
+		EFEFC24E27CB320C00E8C23E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EFEFC24D27CB320C00E8C23E /* FirebaseAnalytics */; };
+		EFEFC25027CB339300E8C23E /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = EFEFC24F27CB339300E8C23E /* FirebaseAnalyticsSwift-Beta */; };
+		EFEFC25227CB339300E8C23E /* FirebaseRemoteConfigSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = EFEFC25127CB339300E8C23E /* FirebaseRemoteConfigSwift-Beta */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,7 +81,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFEFC23227CA09B400E8C23E /* SDWebImageSwiftUI in Frameworks */,
+				EFEFC25227CB339300E8C23E /* FirebaseRemoteConfigSwift-Beta in Frameworks */,
 				EFEFC24B27CB30F600E8C23E /* FirebaseRemoteConfig in Frameworks */,
+				EFEFC25027CB339300E8C23E /* FirebaseAnalyticsSwift-Beta in Frameworks */,
+				EFEFC24E27CB320C00E8C23E /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +97,7 @@
 				EFEFC20427C9B6E500E8C23E /* README.md */,
 				EFEFC1F527C9B5E900E8C23E /* github-client-app */,
 				EFEFC1F427C9B5E900E8C23E /* Products */,
+				EFEFC24C27CB320C00E8C23E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,6 +232,13 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		EFEFC24C27CB320C00E8C23E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -244,6 +258,9 @@
 			packageProductDependencies = (
 				EFEFC23127CA09B400E8C23E /* SDWebImageSwiftUI */,
 				EFEFC24A27CB30F600E8C23E /* FirebaseRemoteConfig */,
+				EFEFC24D27CB320C00E8C23E /* FirebaseAnalytics */,
+				EFEFC24F27CB339300E8C23E /* FirebaseAnalyticsSwift-Beta */,
+				EFEFC25127CB339300E8C23E /* FirebaseRemoteConfigSwift-Beta */,
 			);
 			productName = "github-client-app";
 			productReference = EFEFC1F327C9B5E900E8C23E /* github-client-app.app */;
@@ -561,6 +578,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EFEFC24927CB30F600E8C23E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfig;
+		};
+		EFEFC24D27CB320C00E8C23E /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFEFC24927CB30F600E8C23E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		EFEFC24F27CB339300E8C23E /* FirebaseAnalyticsSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFEFC24927CB30F600E8C23E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAnalyticsSwift-Beta";
+		};
+		EFEFC25127CB339300E8C23E /* FirebaseRemoteConfigSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFEFC24927CB30F600E8C23E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseRemoteConfigSwift-Beta";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
