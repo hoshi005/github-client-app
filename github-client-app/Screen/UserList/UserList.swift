@@ -19,7 +19,8 @@ struct UserList: View {
             SearchBar(text: $viewModel.searchText)
             
             // ユーザ一覧.
-            UserListView(viewModel: viewModel)
+//            UserListView(viewModel: viewModel)
+            UserGridView(viewModel: viewModel)
         }
         .background(Color("BackgroundColor"))
         .navigationBarHidden(true)
