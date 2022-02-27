@@ -51,7 +51,9 @@ struct UserListView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             UserListView(
-                viewModel: UserListViewModel()
+                viewModel: UserListViewModel(
+                    users: Constant.SampleData.SEARCH_USER_SAMPLE.items
+                )
             )
             
             UserListViewItem(user: Constant.SampleData.SEARCH_USER_SAMPLE.items[0])

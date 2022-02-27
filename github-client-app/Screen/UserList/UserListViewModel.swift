@@ -18,8 +18,9 @@ final class UserListViewModel: ObservableObject {
     private let repository: APIRepositoryType
     private var disposables = Set<AnyCancellable>()
     
-    init(repository: APIRepositoryType = GithubAPIRepository()) {
+    init(repository: APIRepositoryType = GithubAPIRepository(), users: [User] = []) {
         self.repository = repository
+        self.users = users
         
         // インクリメンタルサーチ.
         $searchText
