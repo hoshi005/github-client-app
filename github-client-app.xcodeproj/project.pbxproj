@@ -12,7 +12,6 @@
 		EFEFC1FE27C9B5EA00E8C23E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEFC1FD27C9B5EA00E8C23E /* Preview Assets.xcassets */; };
 		EFEFC20E27C9B8EA00E8C23E /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC20D27C9B8EA00E8C23E /* UserList.swift */; };
 		EFEFC21027C9B8F300E8C23E /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC20F27C9B8F300E8C23E /* UserDetail.swift */; };
-		EFEFC21227C9B91200E8C23E /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC21127C9B91200E8C23E /* SafariView.swift */; };
 		EFEFC21427C9B92400E8C23E /* APIRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC21327C9B92400E8C23E /* APIRequestType.swift */; };
 		EFEFC21627C9B93400E8C23E /* APIRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC21527C9B93400E8C23E /* APIRepositoryType.swift */; };
 		EFEFC21827C9B94200E8C23E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC21727C9B94200E8C23E /* APIError.swift */; };
@@ -31,6 +30,7 @@
 		EFEFC23627CA0BE200E8C23E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC23527CA0BE200E8C23E /* SearchBar.swift */; };
 		EFEFC23827CA0CB500E8C23E /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC23727CA0CB500E8C23E /* UserListView.swift */; };
 		EFEFC23A27CA0FA800E8C23E /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC23927CA0FA800E8C23E /* UserDetailViewModel.swift */; };
+		EFEFC23D27CB16B400E8C23E /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC23C27CB16B400E8C23E /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,6 @@
 		EFEFC20427C9B6E500E8C23E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EFEFC20D27C9B8EA00E8C23E /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		EFEFC20F27C9B8F300E8C23E /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
-		EFEFC21127C9B91200E8C23E /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		EFEFC21327C9B92400E8C23E /* APIRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestType.swift; sourceTree = "<group>"; };
 		EFEFC21527C9B93400E8C23E /* APIRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRepositoryType.swift; sourceTree = "<group>"; };
 		EFEFC21727C9B94200E8C23E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		EFEFC23527CA0BE200E8C23E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		EFEFC23727CA0CB500E8C23E /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		EFEFC23927CA0FA800E8C23E /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
+		EFEFC23C27CB16B400E8C23E /* SafariView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,6 @@
 			children = (
 				EFEFC20627C9B79200E8C23E /* UserList */,
 				EFEFC20727C9B79800E8C23E /* UserDetail */,
-				EFEFC20827C9B7A400E8C23E /* Component */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -139,16 +138,9 @@
 			children = (
 				EFEFC20F27C9B8F300E8C23E /* UserDetail.swift */,
 				EFEFC23927CA0FA800E8C23E /* UserDetailViewModel.swift */,
+				EFEFC23B27CB16B400E8C23E /* Component */,
 			);
 			path = UserDetail;
-			sourceTree = "<group>";
-		};
-		EFEFC20827C9B7A400E8C23E /* Component */ = {
-			isa = PBXGroup;
-			children = (
-				EFEFC21127C9B91200E8C23E /* SafariView.swift */,
-			);
-			path = Component;
 			sourceTree = "<group>";
 		};
 		EFEFC20927C9B7B800E8C23E /* Request */ = {
@@ -196,6 +188,14 @@
 			children = (
 				EFEFC23527CA0BE200E8C23E /* SearchBar.swift */,
 				EFEFC23727CA0CB500E8C23E /* UserListView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		EFEFC23B27CB16B400E8C23E /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				EFEFC23C27CB16B400E8C23E /* SafariView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -289,13 +289,13 @@
 				EFEFC23627CA0BE200E8C23E /* SearchBar.swift in Sources */,
 				EFEFC21027C9B8F300E8C23E /* UserDetail.swift in Sources */,
 				EFEFC21627C9B93400E8C23E /* APIRepositoryType.swift in Sources */,
+				EFEFC23D27CB16B400E8C23E /* SafariView.swift in Sources */,
 				EFEFC20E27C9B8EA00E8C23E /* UserList.swift in Sources */,
 				EFEFC22427C9BEFC00E8C23E /* GithubAPIRepository.swift in Sources */,
 				EFEFC21E27C9BCF200E8C23E /* FetchUserRequest.swift in Sources */,
 				EFEFC22D27CA042D00E8C23E /* Bundle+decode.swift in Sources */,
 				EFEFC21827C9B94200E8C23E /* APIError.swift in Sources */,
 				EFEFC1F727C9B5E900E8C23E /* github_client_appApp.swift in Sources */,
-				EFEFC21227C9B91200E8C23E /* SafariView.swift in Sources */,
 				EFEFC21C27C9BCE600E8C23E /* SearchUserRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
