@@ -21,11 +21,11 @@ struct UserGridView: View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVGrid(columns: columns) {
                 ForEach(viewModel.users) { user in
-                    NavigationLink {
-                        UserDetail(user: user)
-                    } label: {
-                        UserGridViewItem(user: user)
-                    }
+                    UserGridViewItem(user: user)
+                        .onTapGesture {
+                            self.viewModel.selectedUser = user
+                            self.viewModel.isShowDetail = true
+                        }
                 }
             }
         }

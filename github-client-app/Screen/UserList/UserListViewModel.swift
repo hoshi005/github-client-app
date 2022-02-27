@@ -15,6 +15,10 @@ final class UserListViewModel: ObservableObject {
     @Published var users: [User] = []
     @Published var error: APIError?
     
+    // GridViewの時に利用する.
+    @Published var selectedUser = Constant.SampleData.SEARCH_USER_SAMPLE.items[0]
+    @Published var isShowDetail = false
+    
     private let repository: APIRepositoryType
     private var disposables = Set<AnyCancellable>()
     

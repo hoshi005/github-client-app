@@ -11,14 +11,33 @@ import SDWebImageSwiftUI
 struct UserDetail: View {
     
     @StateObject private var viewModel = UserDetailViewModel()
+    @Binding var isShowDetail: Bool
     let user: User
     
     var body: some View {
         
         VStack {
-            // ユーザ情報.
-            UserDetailView(user: user)
-                .padding(.horizontal)
+            
+            ZStack(alignment: Alignment(horizontal: .leading, vertical: .top)) {
+                
+                // GridViewから来た時だけ閉じるボタンを表示.
+                if isShowDetail {
+                    Button {
+                        isShowDetail = false
+                    } label: {
+                        Image(systemName: "xmark")
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.accentColor)
+                            .clipShape(Circle())
+                    }
+                }
+                
+                // ユーザ情報.
+                UserDetailView(user: user)
+                    .padding(.top)
+            }
+            .padding(.horizontal)
             
             // リポジトリ一覧.
             List {
@@ -31,6 +50,7 @@ struct UserDetail: View {
             }
         }
         .background(Color("BackgroundColor"))
+        .navigationBarHidden(isShowDetail) // GridViewから来た時は非表示にする.
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle(user.login)
         .onAppear {
@@ -51,7 +71,10 @@ struct UserDetail: View {
 struct UserDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            UserDetail(user: Constant.SampleData.FETCH_USER_SAMPLE)
+            UserDetail(
+                isShowDetail: .constant(true),
+                user: Constant.SampleData.FETCH_USER_SAMPLE
+            )
         }
     }
 }

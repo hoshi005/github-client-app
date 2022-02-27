@@ -16,7 +16,10 @@ struct UserListView: View {
         List {
             ForEach(viewModel.users) { user in
                 NavigationLink {
-                    UserDetail(user: user)
+                    UserDetail(
+                        isShowDetail: .constant(false),
+                        user: user
+                    )
                 } label: {
                     UserListViewItem(user: user)
                 }

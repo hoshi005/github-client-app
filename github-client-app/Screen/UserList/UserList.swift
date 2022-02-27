@@ -14,28 +14,42 @@ struct UserList: View {
     @StateObject private var viewModel = UserListViewModel()
     
     var body: some View {
-        VStack(spacing: 0.0) {
+        ZStack {
             
-            // 検索バー.
-            SearchBar(text: $viewModel.searchText)
-            
-            // ユーザ一覧を remote config の値で分岐.
-            switch remoteConfigManager.layoutType {
-            case .typeA:
-                UserListView(viewModel: viewModel)
-            case .typeB:
-                UserGridView(viewModel: viewModel)
-            default:
-                Spacer()
+            VStack(spacing: 0.0) {
+                
+                // 検索バー.
+                SearchBar(text: $viewModel.searchText)
+                
+                // ユーザ一覧を remote config の値で分岐.
+                switch remoteConfigManager.layoutType {
+                case .typeA:
+                    UserListView(viewModel: viewModel)
+                case .typeB:
+                    UserGridView(viewModel: viewModel)
+                default:
+                    Spacer()
+                }
             }
-        }
-        .background(Color("BackgroundColor"))
-        .navigationBarHidden(true)
-        .alert(item: $viewModel.error) {
-            Alert(
-                title: Text("Error!!"),
-                message: Text($0.localizedDescription)
-            )
+            .background(Color("BackgroundColor"))
+            .navigationBarHidden(true)
+            .alert(item: $viewModel.error) {
+                Alert(
+                    title: Text("Error!!"),
+                    message: Text($0.localizedDescription)
+                )
+            }
+            .onAppear {
+                viewModel.searchText = "hoshi"
+            }
+            
+            // GridViewでユーザを選択されたらここが動く.
+            if viewModel.isShowDetail {
+                UserDetail(
+                    isShowDetail: $viewModel.isShowDetail,
+                    user: viewModel.selectedUser
+                )
+            }
         }
     }
 }
