@@ -31,6 +31,9 @@ struct UserListViewItem: View {
     
     var body: some View {
         HStack {
+            Capsule()
+                .foregroundColor(.accentColor)
+                .frame(width: 4, height: 52)
             WebImage(url: user.avatarUrl)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -46,8 +49,13 @@ struct UserListViewItem: View {
 
 struct UserListView_Previews: PreviewProvider {
     static var previews: some View {
-        UserListView(
-            viewModel: UserListViewModel()
-        )
+        Group {
+            UserListView(
+                viewModel: UserListViewModel()
+            )
+            
+            UserListViewItem(user: Constant.SampleData.SEARCH_USER_SAMPLE.items[0])
+                .previewLayout(.fixed(width: 400, height: 160))
+        }
     }
 }
