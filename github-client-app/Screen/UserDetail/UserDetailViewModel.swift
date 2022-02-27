@@ -15,6 +15,9 @@ final class UserDetailViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var error: APIError?
     
+    // リポジトリ一覧で選択したアイテムを保持.
+    @Published var selectedRepository: Repository?
+    
     private let repository: APIRepositoryType
     private var disposables = Set<AnyCancellable>()
     

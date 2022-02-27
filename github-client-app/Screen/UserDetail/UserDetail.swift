@@ -43,6 +43,9 @@ struct UserDetail: View {
             List {
                 ForEach(viewModel.repositories) { repository in
                     Text(repository.name)
+                        .onTapGesture {
+                            viewModel.selectedRepository = repository
+                        }
                 }
             }
         }
@@ -58,6 +61,9 @@ struct UserDetail: View {
                 title: Text("Error!!"),
                 message: Text($0.localizedDescription)
             )
+        }
+        .sheet(item: $viewModel.selectedRepository) {
+            SafariView(url: $0.htmlUrl)
         }
     }
 }
