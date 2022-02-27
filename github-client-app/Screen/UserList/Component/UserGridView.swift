@@ -21,19 +21,34 @@ struct UserGridView: View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVGrid(columns: columns) {
                 ForEach(viewModel.users) { user in
-                    VStack {
-                        WebImage(url: user.avatarUrl)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 120, height: 120)
-                            .clipShape(Circle())
-                        Text(user.login)
-                            .bold()
-                    }
-                    .padding()
+                    UserGridViewItem(user: user)
                 }
             }
         }
+    }
+}
+
+
+struct UserGridViewItem: View {
+    
+    let user: User
+    
+    var body: some View {
+        VStack {
+            WebImage(url: user.avatarUrl)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 120, height: 120)
+                .clipShape(Circle())
+            Text(user.login)
+                .bold()
+                .foregroundColor(.white)
+        }
+        .padding()
+        .background(
+            Color.accentColor
+                .clipShape(UserInfoShape())
+        )
     }
 }
 
