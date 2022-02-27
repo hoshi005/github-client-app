@@ -21,7 +21,11 @@ struct UserGridView: View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVGrid(columns: columns) {
                 ForEach(viewModel.users) { user in
-                    UserGridViewItem(user: user)
+                    NavigationLink {
+                        UserDetail(user: user)
+                    } label: {
+                        UserGridViewItem(user: user)
+                    }
                 }
             }
         }
