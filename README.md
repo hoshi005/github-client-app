@@ -11,7 +11,6 @@
 - APIは、 https://developer.github.com/v3/ を利用する
 - Rate Limitは認証なしの場合、60 requests per hour なのでpersonal access tokenを利用する
     - https://developer.github.com/v3/guides/getting-started/#oauth
-    - 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
 - GitHubのサンプルアプリ作成に特化したライブラリは使用しない
 - それ以外のライブラリに関して制限はない
 - 以下に記載の最低限の仕様を満たすように実装する

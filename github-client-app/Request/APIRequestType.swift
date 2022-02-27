@@ -43,4 +43,17 @@ extension APIRequestType {
         
         return components
     }
+    
+    /// personal access token の利用.
+    var basicAuth: String? {
+        
+        guard let credentialData = "\(Constant.API.USER_NAME):\(Constant.API.TOKEN)".data(using: .utf8) else {
+            return nil
+        }
+        
+        let credential = credentialData.base64EncodedString()
+        let basicAuth = "Basic \(credential)"
+        
+        return basicAuth
+    }
 }

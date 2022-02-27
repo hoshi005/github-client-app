@@ -20,8 +20,8 @@ final class GithubAPIRepository: APIRepositoryType {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
-        let urlRequest = URLRequest(url: url)
-        // TODO: トークンの設定など.
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue(request.basicAuth, forHTTPHeaderField: "Authorization")
         
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
             .map { data, response in data }
