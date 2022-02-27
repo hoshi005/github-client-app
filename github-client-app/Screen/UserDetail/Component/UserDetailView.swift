@@ -11,7 +11,8 @@ import SDWebImageSwiftUI
 struct UserDetailView: View {
     
     let user: User
-    
+    var namespace: Namespace.ID
+
     var body: some View {
         
         VStack {
@@ -20,7 +21,8 @@ struct UserDetailView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 240, height: 240)
                 .cornerRadius(16.0)
-            
+                .matchedGeometryEffect(id: "\(user.id)-image", in: namespace)
+
             Text(user.login)
                 .font(.title)
                 .fontWeight(.bold)
@@ -45,13 +47,17 @@ struct UserDetailView: View {
         .background(
             Color.accentColor
                 .clipShape(UserInfoShape())
+                .matchedGeometryEffect(id: "\(user.id)-bg", in: namespace)
         )
     }
 }
 
 struct UserDetailView_Previews: PreviewProvider {
+
+    @Namespace static var namespace
+
     static var previews: some View {
-        UserDetailView(user: Constant.SampleData.FETCH_USER_SAMPLE)
+        UserDetailView(user: Constant.SampleData.FETCH_USER_SAMPLE, namespace: namespace)
             .previewLayout(.fixed(width: 400, height: 400))
     }
 }

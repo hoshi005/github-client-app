@@ -12,6 +12,7 @@ struct UserGridView: View {
     
     @ObservedObject var viewModel: UserListViewModel
     var focus: FocusState<Bool>.Binding
+    var namespace: Namespace.ID
 
     private let columns = Array(
         repeating: GridItem(.flexible(), spacing: 4.0),
@@ -22,11 +23,13 @@ struct UserGridView: View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVGrid(columns: columns) {
                 ForEach(viewModel.users) { user in
-                    UserGridViewItem(user: user)
+                    UserGridViewItem(user: user, namespace: namespace)
                         .onTapGesture {
-                            focus.wrappedValue = false
-                            self.viewModel.selectedUser = user
-                            self.viewModel.isShowDetail = true
+                            self.focus.wrappedValue = false
+                            withAnimation(.spring()) {
+                                self.viewModel.selectedUser = user
+                                self.viewModel.isShowDetail = true
+                            }
                         }
                 }
             }
@@ -38,6 +41,7 @@ struct UserGridView: View {
 struct UserGridViewItem: View {
     
     let user: User
+    var namespace: Namespace.ID
     
     var body: some View {
         VStack {
@@ -46,6 +50,7 @@ struct UserGridViewItem: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 120, height: 120)
                 .clipShape(Circle())
+                .matchedGeometryEffect(id: "\(user.id)-image", in: namespace)
             Text(user.login)
                 .bold()
                 .foregroundColor(.white)
@@ -54,6 +59,7 @@ struct UserGridViewItem: View {
         .background(
             Color.accentColor
                 .clipShape(UserInfoShape())
+                .matchedGeometryEffect(id: "\(user.id)-bg", in: namespace)
         )
     }
 }
@@ -61,13 +67,15 @@ struct UserGridViewItem: View {
 struct UserGridView_Previews: PreviewProvider {
     
     @FocusState static var focus: Bool
+    @Namespace static var namespace
 
     static var previews: some View {
         UserGridView(
             viewModel: UserListViewModel(
                 users: Constant.SampleData.SEARCH_USER_SAMPLE.items
             ),
-            focus: $focus
+            focus: $focus,
+            namespace: namespace
         )
     }
 }

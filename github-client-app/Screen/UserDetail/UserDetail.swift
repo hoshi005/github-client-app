@@ -13,6 +13,7 @@ struct UserDetail: View {
     @StateObject private var viewModel = UserDetailViewModel()
     @Binding var isShowDetail: Bool
     let user: User
+    var namespace: Namespace.ID
     
     var body: some View {
         
@@ -23,7 +24,9 @@ struct UserDetail: View {
                 // GridViewから来た時だけ閉じるボタンを表示.
                 if isShowDetail {
                     Button {
-                        isShowDetail = false
+                        withAnimation(.spring()) {
+                            isShowDetail = false
+                        }
                     } label: {
                         Image(systemName: "xmark")
                             .padding()
@@ -34,7 +37,7 @@ struct UserDetail: View {
                 }
                 
                 // ユーザ情報.
-                UserDetailView(user: user)
+                UserDetailView(user: user, namespace: namespace)
                     .padding(.top)
             }
             .padding(.horizontal)
@@ -69,11 +72,15 @@ struct UserDetail: View {
 }
 
 struct UserDetail_Previews: PreviewProvider {
+    
+    @Namespace static var namespace
+    
     static var previews: some View {
         NavigationView {
             UserDetail(
                 isShowDetail: .constant(true),
-                user: Constant.SampleData.FETCH_USER_SAMPLE
+                user: Constant.SampleData.FETCH_USER_SAMPLE,
+                namespace: namespace
             )
         }
     }

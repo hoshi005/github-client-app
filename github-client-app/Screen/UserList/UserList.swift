@@ -14,6 +14,7 @@ struct UserList: View {
     @StateObject private var viewModel = UserListViewModel()
     
     @FocusState private var focus: Bool
+    @Namespace private var namespace
     
     var body: some View {
         ZStack {
@@ -30,7 +31,8 @@ struct UserList: View {
                 case .typeB:
                     UserGridView(
                         viewModel: viewModel,
-                        focus: $focus
+                        focus: $focus,
+                        namespace: namespace
                     )
                 default:
                     Spacer()
@@ -44,15 +46,16 @@ struct UserList: View {
                     message: Text($0.localizedDescription)
                 )
             }
-            .onAppear {
-                viewModel.searchText = "hoshi"
-            }
+//            .onAppear {
+//                viewModel.searchText = "hoshi"
+//            }
             
             // GridViewでユーザを選択されたらここが動く.
             if viewModel.isShowDetail {
                 UserDetail(
                     isShowDetail: $viewModel.isShowDetail,
-                    user: viewModel.selectedUser
+                    user: viewModel.selectedUser,
+                    namespace: namespace
                 )
             }
         }

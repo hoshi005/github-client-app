@@ -11,14 +11,16 @@ import SDWebImageSwiftUI
 struct UserListView: View {
     
     @ObservedObject var viewModel: UserListViewModel
-    
+    @Namespace private var namespace
+
     var body: some View {
         List {
             ForEach(viewModel.users) { user in
                 NavigationLink {
                     UserDetail(
                         isShowDetail: .constant(false),
-                        user: user
+                        user: user,
+                        namespace: namespace
                     )
                 } label: {
                     UserListViewItem(user: user)
