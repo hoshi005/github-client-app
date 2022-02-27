@@ -40,6 +40,12 @@ struct UserDetailView: View {
             }
         }
         .frame(maxWidth: .infinity)
+        .foregroundColor(.white)
+        .padding()
+        .background(
+            Color.accentColor
+                .clipShape(UserInfoShape())
+        )
     }
 }
 

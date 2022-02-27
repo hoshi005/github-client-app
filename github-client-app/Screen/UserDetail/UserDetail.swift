@@ -18,6 +18,7 @@ struct UserDetail: View {
         VStack {
             // ユーザ情報.
             UserDetailView(user: user)
+                .padding(.horizontal)
             
             // リポジトリ一覧.
             List {

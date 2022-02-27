@@ -33,6 +33,7 @@
 		EFEFC23D27CB16B400E8C23E /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC23C27CB16B400E8C23E /* SafariView.swift */; };
 		EFEFC23F27CB1C8500E8C23E /* RepositoryListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC23E27CB1C8500E8C23E /* RepositoryListItem.swift */; };
 		EFEFC24127CB203800E8C23E /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC24027CB203800E8C23E /* UserDetailView.swift */; };
+		EFEFC24427CB285C00E8C23E /* UserInfoShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC24327CB285C00E8C23E /* UserInfoShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		EFEFC23C27CB16B400E8C23E /* SafariView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		EFEFC23E27CB1C8500E8C23E /* RepositoryListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListItem.swift; sourceTree = "<group>"; };
 		EFEFC24027CB203800E8C23E /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		EFEFC24327CB285C00E8C23E /* UserInfoShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			children = (
 				EFEFC20627C9B79200E8C23E /* UserList */,
 				EFEFC20727C9B79800E8C23E /* UserDetail */,
+				EFEFC24227CB284300E8C23E /* Component */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -202,6 +205,14 @@
 				EFEFC23C27CB16B400E8C23E /* SafariView.swift */,
 				EFEFC24027CB203800E8C23E /* UserDetailView.swift */,
 				EFEFC23E27CB1C8500E8C23E /* RepositoryListItem.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		EFEFC24227CB284300E8C23E /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				EFEFC24327CB285C00E8C23E /* UserInfoShape.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -288,6 +299,7 @@
 				EFEFC23A27CA0FA800E8C23E /* UserDetailViewModel.swift in Sources */,
 				EFEFC23F27CB1C8500E8C23E /* RepositoryListItem.swift in Sources */,
 				EFEFC23827CA0CB500E8C23E /* UserListView.swift in Sources */,
+				EFEFC24427CB285C00E8C23E /* UserInfoShape.swift in Sources */,
 				EFEFC22027C9BCFD00E8C23E /* FetchRepositoryRequest.swift in Sources */,
 				EFEFC21427C9B92400E8C23E /* APIRequestType.swift in Sources */,
 				EFEFC21A27C9B95300E8C23E /* Constant.swift in Sources */,
