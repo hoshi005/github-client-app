@@ -19,6 +19,7 @@ struct SearchBar: View {
                 .foregroundColor(.secondary)
             TextField(placeholder, text: $text)
                 .disableAutocorrection(true)
+                .submitLabel(.search)
         }
         .padding(.vertical, 12)
         .padding(.horizontal)
