@@ -46,9 +46,6 @@ struct UserList: View {
                     message: Text($0.localizedDescription)
                 )
             }
-//            .onAppear {
-//                viewModel.searchText = "hoshi"
-//            }
             
             // GridViewでユーザを選択されたらここが動く.
             if viewModel.isShowDetail {

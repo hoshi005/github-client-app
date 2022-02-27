@@ -34,6 +34,8 @@ final class UserListViewModel: ObservableObject {
                 self?.search()
             })
             .store(in: &disposables)
+        
+        searchText = "hoshi"
     }
     
     func search() {
