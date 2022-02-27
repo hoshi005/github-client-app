@@ -16,30 +16,10 @@ struct UserDetail: View {
     var body: some View {
         
         VStack {
-            WebImage(url: user.avatarUrl)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 240, height: 240)
-                .cornerRadius(16.0)
+            // ユーザ情報.
+            UserDetailView(user: user)
             
-            Text(user.login)
-                .font(.title)
-                .fontWeight(.bold)
-            
-            if let name = user.name {
-                Text(name)
-                    .font(.body)
-                    .fontWeight(.bold)
-            }
-            
-            HStack {
-                Group {
-                    Text("フォロワー: \(user.followers ?? 0)")
-                    Text("フォロイー: \(user.following ?? 0)")
-                }
-                .font(.caption)
-            }
-            
+            // リポジトリ一覧.
             List {
                 ForEach(viewModel.repositories) { repository in
                     RepositoryListItem(repository: repository)
@@ -49,7 +29,6 @@ struct UserDetail: View {
                 }
             }
         }
-        .frame(maxWidth: .infinity)
         .background(Color("BackgroundColor"))
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle(user.login)
