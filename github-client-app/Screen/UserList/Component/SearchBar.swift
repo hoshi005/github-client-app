@@ -10,6 +10,7 @@ import SwiftUI
 struct SearchBar: View {
     
     @Binding var text: String
+    var focus: FocusState<Bool>.Binding
     var placeholder = "githubユーザ名を入力してください"
     
     var body: some View {
@@ -20,6 +21,7 @@ struct SearchBar: View {
             TextField(placeholder, text: $text)
                 .disableAutocorrection(true)
                 .submitLabel(.search)
+                .focused(focus)
         }
         .padding(.vertical, 12)
         .padding(.horizontal)
@@ -32,9 +34,13 @@ struct SearchBar: View {
 }
 
 struct SearchBar_Previews: PreviewProvider {
+    
+    @FocusState static var focus: Bool
+
     static var previews: some View {
         SearchBar(
             text: .constant(""),
+            focus: $focus,
             placeholder: "■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□"
         ).previewLayout(.fixed(width: 400, height: 100))
     }

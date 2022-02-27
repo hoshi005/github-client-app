@@ -13,20 +13,25 @@ struct UserList: View {
     @EnvironmentObject var remoteConfigManager: RemoteConfigManager
     @StateObject private var viewModel = UserListViewModel()
     
+    @FocusState private var focus: Bool
+    
     var body: some View {
         ZStack {
             
             VStack(spacing: 0.0) {
                 
                 // 検索バー.
-                SearchBar(text: $viewModel.searchText)
+                SearchBar(text: $viewModel.searchText, focus: $focus)
                 
                 // ユーザ一覧を remote config の値で分岐.
                 switch remoteConfigManager.layoutType {
                 case .typeA:
                     UserListView(viewModel: viewModel)
                 case .typeB:
-                    UserGridView(viewModel: viewModel)
+                    UserGridView(
+                        viewModel: viewModel,
+                        focus: $focus
+                    )
                 default:
                     Spacer()
                 }
