@@ -17,6 +17,7 @@ struct github_client_appApp: App {
         WindowGroup {
             NavigationView {
                 UserList()
+                    .environmentObject(RemoteConfigManager())
             }
         }
     }

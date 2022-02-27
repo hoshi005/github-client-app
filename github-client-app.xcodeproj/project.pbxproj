@@ -40,6 +40,7 @@
 		EFEFC24E27CB320C00E8C23E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EFEFC24D27CB320C00E8C23E /* FirebaseAnalytics */; };
 		EFEFC25027CB339300E8C23E /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = EFEFC24F27CB339300E8C23E /* FirebaseAnalyticsSwift-Beta */; };
 		EFEFC25227CB339300E8C23E /* FirebaseRemoteConfigSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = EFEFC25127CB339300E8C23E /* FirebaseRemoteConfigSwift-Beta */; };
+		EFEFC25527CB344500E8C23E /* RemoteConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFC25427CB344500E8C23E /* RemoteConfigManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		EFEFC24327CB285C00E8C23E /* UserInfoShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoShape.swift; sourceTree = "<group>"; };
 		EFEFC24527CB2AF800E8C23E /* UserGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGridView.swift; sourceTree = "<group>"; };
 		EFEFC24727CB306B00E8C23E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EFEFC25427CB344500E8C23E /* RemoteConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				EFEFC20927C9B7B800E8C23E /* Request */,
 				EFEFC20A27C9B7C500E8C23E /* Repository */,
 				EFEFC20B27C9B7D400E8C23E /* Model */,
+				EFEFC25327CB342E00E8C23E /* ABTest */,
 				EFEFC22527CA03C400E8C23E /* Ohter Files */,
 				EFEFC1FA27C9B5EA00E8C23E /* Assets.xcassets */,
 				EFEFC1FC27C9B5EA00E8C23E /* Preview Content */,
@@ -239,6 +242,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EFEFC25327CB342E00E8C23E /* ABTest */ = {
+			isa = PBXGroup;
+			children = (
+				EFEFC25427CB344500E8C23E /* RemoteConfigManager.swift */,
+			);
+			path = ABTest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,6 +349,7 @@
 				EFEFC21027C9B8F300E8C23E /* UserDetail.swift in Sources */,
 				EFEFC21627C9B93400E8C23E /* APIRepositoryType.swift in Sources */,
 				EFEFC23D27CB16B400E8C23E /* SafariView.swift in Sources */,
+				EFEFC25527CB344500E8C23E /* RemoteConfigManager.swift in Sources */,
 				EFEFC20E27C9B8EA00E8C23E /* UserList.swift in Sources */,
 				EFEFC24627CB2AF800E8C23E /* UserGridView.swift in Sources */,
 				EFEFC22427C9BEFC00E8C23E /* GithubAPIRepository.swift in Sources */,
