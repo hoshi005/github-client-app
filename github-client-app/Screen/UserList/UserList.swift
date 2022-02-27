@@ -10,6 +10,7 @@ import SDWebImageSwiftUI
 
 struct UserList: View {
     
+    @EnvironmentObject var remoteConfigManager: RemoteConfigManager
     @StateObject private var viewModel = UserListViewModel()
     
     var body: some View {
@@ -18,9 +19,15 @@ struct UserList: View {
             // 検索バー.
             SearchBar(text: $viewModel.searchText)
             
-            // ユーザ一覧.
-//            UserListView(viewModel: viewModel)
-            UserGridView(viewModel: viewModel)
+            // ユーザ一覧を remote config の値で分岐.
+            switch remoteConfigManager.layoutType {
+            case .typeA:
+                UserListView(viewModel: viewModel)
+            case .typeB:
+                UserGridView(viewModel: viewModel)
+            default:
+                Spacer()
+            }
         }
         .background(Color("BackgroundColor"))
         .navigationBarHidden(true)
@@ -37,6 +44,7 @@ struct UserList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             UserList()
+                .environmentObject(RemoteConfigManager())
         }
     }
 }
