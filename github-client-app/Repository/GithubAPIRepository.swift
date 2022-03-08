@@ -35,4 +35,10 @@ final class GithubAPIRepository: APIRepositoryType {
             .eraseToAnyPublisher()
         
     }
+    
+    
+    func requestConcurrency<Request>(with request: Request) async throws -> Request.Response where Request : APIRequestType {
+        // TODO: ビルド通すため
+        throw APIError.invalidURL(description: "AAA")
+    }
 }
