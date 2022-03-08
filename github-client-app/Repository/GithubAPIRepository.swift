@@ -38,7 +38,19 @@ final class GithubAPIRepository: APIRepositoryType {
     
     
     func requestConcurrency<Request>(with request: Request) async throws -> Request.Response where Request : APIRequestType {
-        // TODO: ビルド通すため
-        throw APIError.invalidURL(description: "AAA")
+        
+        guard let url = request.url.url else {
+            throw APIError.invalidURL(description: "URLが不正です.")
+        }
+        
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+//        var urlRequest = URLRequest(url: url)
+//        urlRequest.setValue(request.basicAuth, forHTTPHeaderField: "Authorization")
+        let urlRequest = URLRequest(url: url)
+        
+        let (data, _) = try await URLSession.shared.data(for: urlRequest)
+        return try decoder.decode(Request.Response.self, from: data)
     }
 }
