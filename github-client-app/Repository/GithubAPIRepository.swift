@@ -46,11 +46,21 @@ final class GithubAPIRepository: APIRepositoryType {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
-//        var urlRequest = URLRequest(url: url)
-//        urlRequest.setValue(request.basicAuth, forHTTPHeaderField: "Authorization")
-        let urlRequest = URLRequest(url: url)
-        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue(request.basicAuth, forHTTPHeaderField: "Authorization")
+
         let (data, _) = try await URLSession.shared.data(for: urlRequest)
         return try decoder.decode(Request.Response.self, from: data)
+        
+        
+        /*
+         - async let だと、URLRequestがvarではまずい.
+         - 途中で変更されると危ないため？
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue(request.basicAuth, forHTTPHeaderField: "Authorization")
+        
+        async let (data, _) = URLSession.shared.data(for: urlRequest)
+        return try await decoder.decode(Request.Response.self, from: data)
+         */
     }
 }
