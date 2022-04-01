@@ -31,7 +31,8 @@ final class UserListViewModel: ObservableObject {
             .removeDuplicates()
             .debounce(for: 0.5, scheduler: RunLoop.main)
             .sink( receiveValue: { [weak self] _ in
-                self?.search()
+//                self?.search()
+                self?.searchConcurrency()
             })
             .store(in: &disposables)
         
@@ -65,5 +66,33 @@ final class UserListViewModel: ObservableObject {
                 self.users = response.items
             }
             .store(in: &disposables)
+    }
+    
+    /// concurrencyを利用した検索処理.
+    func searchConcurrency() {
+        self.users = []
+        
+        if searchText.isEmpty {
+            return
+        }
+        
+        self.isLoading = true
+
+        Task {
+            do {
+                let request = SearchUserRequest(query: searchText)
+                let response = try await repository.requestConcurrency(with: request)
+                DispatchQueue.main.async {
+                    self.users = response.items
+                }
+            } catch {
+                self.users = []
+//                self.error = error
+            }
+            
+            DispatchQueue.main.async {
+                self.isLoading = false
+            }
+        }
     }
 }
